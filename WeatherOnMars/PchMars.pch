@@ -1,0 +1,23 @@
+//
+//  PchMars.pch
+//  WeatherOnMars
+//
+//  Copyright © 2015 Viktor Edelberg. All rights reserved.
+//
+
+#import "AppDelegate.h"
+#import "NSDate+DateUtils.h"
+#import "UIView+VisualEffects.h"
+#import "NSString+Validation.h"
+
+#ifndef PchMars_pch
+#define PchMars_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PchMars_pch */
+
+#define SharedAppDelegate ((AppDelegate *)[[UIApplication sharedApplication] delegate])
+
+#define kNotificationWeatherDataSaved @"NewWeatherDataSaved"

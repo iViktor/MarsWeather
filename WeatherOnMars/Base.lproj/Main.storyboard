@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--WeatherVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="WeatherVC" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mars_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="XR8-ze-nlL">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KWD-oo-WoF">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="k6s-pC-5g7">
+                                    <size key="itemSize" width="485" height="220"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="15" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="weatherCell" id="QWJ-cO-gsJ" customClass="WeatherCVCell">
+                                        <rect key="frame" x="58" y="15" width="485" height="220"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="485" height="220"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="terrestrialDateLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUp-CR-fvO">
+                                                    <rect key="frame" x="143" y="75" width="199" height="27"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sol" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YrD-18-UmF">
+                                                    <rect key="frame" x="143" y="102" width="25" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="minTemp" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcl-Ho-n97">
+                                                    <rect key="frame" x="22" y="30" width="76" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="maxTemp" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tly-Uf-huP">
+                                                    <rect key="frame" x="382" y="30" width="81" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sunset" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0w-mf-hR0">
+                                                    <rect key="frame" x="407" y="168" width="56" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="weatherStatus" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzg-oo-kLY">
+                                                    <rect key="frame" x="22" y="168" width="121" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aCH-8R-60F">
+                                                    <rect key="frame" x="8" y="8" width="469" height="204"/>
+                                                    <color key="backgroundColor" red="0.86501736111111116" green="0.86501736111111116" blue="0.86501736111111116" alpha="1" colorSpace="calibratedRGB"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailingMargin" secondItem="aCH-8R-60F" secondAttribute="trailing" id="Db6-S9-wyV"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="e0w-mf-hR0" secondAttribute="bottom" constant="22" id="Klz-Ao-dWd"/>
+                                            <constraint firstAttribute="leadingMargin" secondItem="aCH-8R-60F" secondAttribute="leading" id="L3f-2P-euF"/>
+                                            <constraint firstItem="YrD-18-UmF" firstAttribute="leading" secondItem="YUp-CR-fvO" secondAttribute="leading" id="N2p-sQ-5v9"/>
+                                            <constraint firstItem="dcl-Ho-n97" firstAttribute="leading" secondItem="QWJ-cO-gsJ" secondAttribute="leadingMargin" constant="14" id="ORJ-JX-9e7"/>
+                                            <constraint firstItem="dcl-Ho-n97" firstAttribute="top" secondItem="QWJ-cO-gsJ" secondAttribute="topMargin" constant="22" id="OVV-pG-fXW"/>
+                                            <constraint firstItem="YUp-CR-fvO" firstAttribute="top" secondItem="QWJ-cO-gsJ" secondAttribute="topMargin" constant="67" id="P7s-vm-lop"/>
+                                            <constraint firstItem="Tly-Uf-huP" firstAttribute="top" secondItem="QWJ-cO-gsJ" secondAttribute="topMargin" constant="22" id="Wxg-GQ-10R"/>
+                                            <constraint firstItem="YUp-CR-fvO" firstAttribute="centerX" secondItem="QWJ-cO-gsJ" secondAttribute="centerX" id="YUZ-2v-SiM"/>
+                                            <constraint firstItem="YrD-18-UmF" firstAttribute="top" secondItem="YUp-CR-fvO" secondAttribute="bottom" id="bWl-LT-wBt"/>
+                                            <constraint firstAttribute="topMargin" secondItem="aCH-8R-60F" secondAttribute="top" id="cf6-we-mpb"/>
+                                            <constraint firstItem="pzg-oo-kLY" firstAttribute="leading" secondItem="QWJ-cO-gsJ" secondAttribute="leadingMargin" constant="14" id="e1b-3j-h4q"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="pzg-oo-kLY" secondAttribute="bottom" constant="22" id="eeW-Wh-aOL"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="aCH-8R-60F" secondAttribute="bottom" id="mna-g5-AXm"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="e0w-mf-hR0" secondAttribute="trailing" constant="14" id="p5o-Xl-tMD"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="Tly-Uf-huP" secondAttribute="trailing" constant="14" id="qgO-oX-yAf"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="marsDayLabel" destination="YrD-18-UmF" id="23v-gX-KI7"/>
+                                            <outlet property="maxTempLabel" destination="Tly-Uf-huP" id="Moj-G9-kxO"/>
+                                            <outlet property="minTempLabel" destination="dcl-Ho-n97" id="woz-ly-Hxu"/>
+                                            <outlet property="sunRiseSetLabel" destination="e0w-mf-hR0" id="KzT-ju-qmo"/>
+                                            <outlet property="terrestrialDateLabel" destination="YUp-CR-fvO" id="q6z-Eh-Rs4"/>
+                                            <outlet property="weatherCellBg" destination="aCH-8R-60F" id="IHg-as-Z14"/>
+                                            <outlet property="weatherStatusLabel" destination="pzg-oo-kLY" id="Kwa-VR-UC7"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="XVT-We-2nr"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="bjT-xc-niF"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XR8-ze-nlL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9z1-pr-vgI"/>
+                            <constraint firstItem="XR8-ze-nlL" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Bq8-fI-6Xa"/>
+                            <constraint firstItem="KWD-oo-WoF" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="Mrh-Ct-Fgr"/>
+                            <constraint firstItem="XR8-ze-nlL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="RFT-sK-nKZ"/>
+                            <constraint firstItem="KWD-oo-WoF" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Zfu-et-0Sg"/>
+                            <constraint firstItem="KWD-oo-WoF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oow-Ox-Kyq"/>
+                            <constraint firstItem="KWD-oo-WoF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sgJ-CY-ERX"/>
+                            <constraint firstItem="XR8-ze-nlL" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="xs4-bY-N8U"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="marsBG" destination="XR8-ze-nlL" id="fIE-Qg-oY3"/>
+                        <outlet property="weatherCV" destination="KWD-oo-WoF" id="ihy-Ej-ngf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="565" y="490"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mars_bg.png" width="4392" height="3291"/>
+    </resources>
+</document>
